@@ -1,0 +1,134 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+        <style>
+        body {
+            background-color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        }
+
+        header {
+        color: antiquewhite;
+        background-color: #f3f1f1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        }
+
+        header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        }
+
+        header button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 1rem;
+        cursor: pointer;
+        }
+        .carousel img {
+    width: 80%; 
+    height: auto; 
+    max-height: 200px; 
+    margin: 0 auto; 
+}
+
+
+        </style>
+        <title>Children's Story</title>
+        </head>
+        <body>
+        <header>
+            <h1>Welcome to Our Children's Story!</h1>
+            <p>Bande,Numer Jan T. 
+                BSCS 1-1
+            </p>
+            <button id="start-btn">Start Reading</button>
+        </header>
+        <div class="carousel">
+            <div>
+                <a href="story.html">
+                    <img src="https://cdn.shopify.com/s/files/1/2081/8163/files/002_bf7c72c0-1203-4ce5-a714-ea9f1681b142.jpg?v=1613387410" alt="Book 1">
+                </a>
+            </div>
+            <div>
+                <a href="story.html">
+                    <img src="https://cdn.shopify.com/s/files/1/2081/8163/files/002_d29c5f83-013a-4e39-b210-4879b1182854.jpg?v=1613388136" alt="Book 2">
+                </a>
+            </div>
+            <div>
+                <a href="story.html">
+                    <img src="https://cdn.shopify.com/s/files/1/2081/8163/files/002_93f7541b-66d7-45b7-b563-3e22070abaae.jpg?v=1613452874" alt="Book 3">
+                </a>
+            </div>
+            <div>
+                <a href="story.html">
+                    <img src="https://cdn.shopify.com/s/files/1/2081/8163/files/002_034e9407-2136-4cf0-95f3-c819083b3630.jpg?v=1613454472" alt="Book 4">
+                </a>
+            </div>
+            <div>
+                <a href="story.html">
+                    <img src="https://cdn.shopify.com/s/files/1/2081/8163/files/01_c467c1ed-49da-449b-84c5-eb6d2baa90ce.jpg?v=1613458208" alt="Book 5">
+                </a>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <script>
+            document.getElementById('start-btn').addEventListener('click', function() {
+        window.location.href = 'story.html';
+        });
+        $(document).ready(function(){
+                $('.carousel').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
+                                infinite: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+        
+        </body>
+        </html>
